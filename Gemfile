@@ -1,12 +1,10 @@
 source :rubygems
 
-gem 'sprockets'
 
-# Coffee Script
-gem 'coffee-script'
-
-# Guard
-gem 'guard'
-gem 'guard-haml'
-gem 'guard-sprockets2'
-gem 'sass'
+group :development do
+  gem 'guard'
+  gem 'guard-coffeescript'
+  gem 'guard-sass'
+  gem 'guard-haml'
+  gem 'rb-fsevent', '~> 0.9.1'
+end
