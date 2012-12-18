@@ -5,10 +5,26 @@
     %title Deck.js Codewalk
     %link{:href => "deck.core.css", :rel => "stylesheet"}
     %link{:href => "../deck.codewalk.css", :rel => "stylesheet"}
-    
+    %link{:href => "swiss.css", :rel => "stylesheet"}
+    %link{:href => "demo.css", :rel => "stylesheet"}
   %body.deck-container
     %section.slide
-      %h1 Slide
+      %pre
+        %code
+          %span.codewalk.domready
+            $(function() {
+            %span.codewalk.onclick
+              $('button').on('click', function() {
+              %span.codewalk.logevent
+                console.log('A button was clicked!');
+              });
+            });
+
+      %ul
+        %li.slide{ "data-codewalk" => ".domready" } Wait for the DOM to be loaded
+        %li.slide{ "data-codewalk" => ".onclick" } Create an event listener on click for each button
+        %li.slide{ "data-codewalk" => ".logevent" } Log an event that the button was clicked
+
     %section.slide
       %h1 Content
     %section.slide
@@ -20,5 +36,5 @@
     %script{:src => "../deck.codewalk.js"}
     :javascript
       $(function() {
-      	$.deck('.slide');
+        $.deck('.slide');
       });

@@ -5,10 +5,27 @@
     <title>Deck.js Codewalk</title>
     <link href='deck.core.css' rel='stylesheet' />
     <link href='../deck.codewalk.css' rel='stylesheet' />
+    <link href='swiss.css' rel='stylesheet' />
+    <link href='demo.css' rel='stylesheet' />
   </head>
   <body class='deck-container'>
     <section class='slide'>
-      <h1>Slide</h1>
+      <pre><code><span class='codewalk domready'>
+        $(function() {
+        <span class='codewalk onclick'>
+          $('button').on('click', function() {
+          <span class='codewalk logevent'>
+            console.log('A button was clicked!');
+          </span>
+          });
+        </span>
+        });
+      </span></code></pre>
+      <ul>
+        <li class='slide' data-codewalk='.domready'>Wait for the DOM to be loaded</li>
+        <li class='slide' data-codewalk='.onclick'>Create an event listener on click for each button</li>
+        <li class='slide' data-codewalk='.logevent'>Log an event that the button was clicked</li>
+      </ul>
     </section>
     <section class='slide'>
       <h1>Content</h1>
@@ -23,7 +40,7 @@
     <script type='text/javascript'>
       //<![CDATA[
         $(function() {
-        	$.deck('.slide');
+          $.deck('.slide');
         });
       //]]>
     </script>

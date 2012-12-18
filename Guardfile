@@ -9,4 +9,5 @@ group :development do
   end
 
   guard :sass, :input => 'src', :output => '.'
+  guard :sass, :input => 'demo', :output => 'demo'
 end

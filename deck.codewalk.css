@@ -1,0 +1,4 @@
+.codewalk {
+  display: none; }
+  .codewalk.active {
+    display: inline-block; }
