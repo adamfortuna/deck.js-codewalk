@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=1024, user-scalable=no", :name => "viewport"}
+    %title Deck.js Codewalk
+    %link{:href => "deck.core.css", :rel => "stylesheet"}
+    %link{:href => "../deck.codewalk.css", :rel => "stylesheet"}
+    
+  %body.deck-container
+    %section.slide
+      %h1 Slide
+    %section.slide
+      %h1 Content
+    %section.slide
+      %h1 Here
+
+    %script{:src => "jquery.js"}
+    %script{:src => "modernizr.custom.js"}
+    %script{:src => "deck.core.js"}
+    %script{:src => "../deck.codewalk.js"}
+    :javascript
+      $(function() {
+      	$.deck('.slide');
+      });
